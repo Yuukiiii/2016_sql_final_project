@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- word type -->
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>International</title>
+</head>
+
+<body>
+
+<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div id="main_top">
+        <nav>
+            <div class="container">
+				<div class="nav-wrapper">
+                    <a href="#" class="brand-logo">INternational</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+
+
+        <div class="section">
+            <div id="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="col s12 m3 offset-m8">
+                            <div class="card-panel white" style="padding: 0; margin-top: 30px; padding-bottom: 1px">
+
+                                <!--TABS-->
+
+                                <div class="row">
+                                    <div class="col s12" style="padding: 0">
+                                        <ul class="tabs">
+                                            <li id="login_area_active" class="tab col s6"><a href="#">login</a></li>
+                                            <li id="sign_up_area_active" class="tab col s6"><a href="#">sign-up</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--TABS END-->
+
+                                <!--DIV1 LOGIN_AREA-->
+
+                                <div id="login_area">
+                                <form action = "check_login.jsp" method="post">
+	                                    <div class="row">
+	                                        <div class="col s12">
+	                                            <div class="row">
+	                                                <div class="input-field col s12">
+	                                                    <input name="e_mail" type="text" class="validate">
+	                                                    <label for="e_mail">E_mail</label>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="input-field col s12">
+	                                                    <input name="password" type="password" class="validate">
+	                                                    <label for="password">Password</label>
+	                                                </div>
+	                                            </div>
+	                                            <div>
+	                                            	<div class="operator">
+	                                            		<input name = "login" type = "submit" class = "waves-effect waves-light btn red lighten-2 left" value="OK">
+	                                            		<input name = "reset" type = "reset" class = "waves-effect waves-light btn red lighten-2 right" value="Reset">
+	                                            	
+	                                             
+	                                              	</div>
+	                                            </div>
+	                                            
+	                                        </div>
+	                                    </div>
+                                    </form>
+                                </div>
+
+                                <!--DIV1 LOGIN_AREA END-->
+
+                                <!--DIV2 SIGN_UP_AREA-->
+
+                                <div id="sign_up_area" style="display: none">
+	                                <form action="adduser.jsp" method="post">
+	                                    <div class="row">
+	                                        <div class="col s12">
+	                                            <div class="row">
+	                                                <div class="input-field col s12">
+	                                                    <input name="e_mail" type="text" class="validate" charset = "utf-8 ">
+	                                                    <label for="e_mail">E_mail</label>
+	                                                </div>
+	                                            </div>
+	                                            <div class="row">
+	                                                <div class="input-field col s12">
+	                                                    <input name="password" type="password" class="validate">
+	                                                    <label for="password">Password</label>
+	                                                </div>
+	                                            </div>
+	                                            <!--  <a class="waves-effect waves-light btn red lighten-2 right">注册</a>-->
+	                                            <div class="register">
+	                                           		<input name="adduser" type="submit" class="waves-effect waves-light btn red lighten-2 right" value="Sign-up">	                                           					                           
+	                                           
+	                                            </div>
+	                                        </div>
+	                                    </div>
+                                    </form>
+                                </div>
+
+                                <!--DIV2 SIGN_UP_AREA END-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!--  -->
+
+<script>
+    var la = document.getElementById('login_area');
+    var sa = document.getElementById('sign_up_area');
+    var laa = document.getElementById('login_area_active');
+    var saa = document.getElementById('sign_up_area_active');
+
+    laa.onclick = function () {
+        la.style.display = 'block';
+        sa.style.display = 'none';
+    }
+
+    saa.onclick = function () {
+        la.style.display = 'none';
+        sa.style.display = 'block';
+    }
+
+</script>
+
+</body>
+</html>
